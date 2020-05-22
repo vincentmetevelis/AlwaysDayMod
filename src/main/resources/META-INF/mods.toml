@@ -1,9 +1,9 @@
 modLoader="javafml"
-loaderVersion="[28.2,)"
+loaderVersion="[31.2,)"
 credits="vincentmet"
 [[mods]]
 modId="alwaysday"
-version="1.14.4-1.0.0"
+version="1.15.2-1.0.0"
 displayName="Always Day"
 description='''
 No more SSSsss!!!
