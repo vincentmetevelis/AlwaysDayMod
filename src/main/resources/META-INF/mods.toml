@@ -1,0 +1,10 @@
+modLoader="javafml"
+loaderVersion="[28.2,)"
+credits="vincentmet"
+[[mods]]
+modId="alwaysday"
+version="1.14.4-1.0.0"
+displayName="Always Day"
+description='''
+No more SSSsss!!!
+'''
