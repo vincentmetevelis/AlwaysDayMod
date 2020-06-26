@@ -21,7 +21,7 @@ public class BaseClass{
         public static void onWorldLoad(WorldEvent.Load event){
             if(event.getWorld() instanceof ServerWorld){
                 ((ServerWorld)event.getWorld()).getGameRules().get(GameRules.DO_DAYLIGHT_CYCLE).set(false, ((ServerWorld)event.getWorld()).getServer());
-                ((ServerWorld)event.getWorld()).setDayTime(6000L);
+                ((ServerWorld)event.getWorld()).func_241114_a_(6000L);//setDayTime
             }
         }
     }
