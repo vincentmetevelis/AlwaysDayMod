@@ -18,7 +18,7 @@ public class BaseClass{
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setupCommon);
     }
     
-    private void setupCommon(final FMLCommonSetupEvent eventwaw){
+    private void setupCommon(final FMLCommonSetupEvent event){
         Config.ReadWrite.readFromFile(FMLPaths.CONFIGDIR.get(), BaseClass.MODID + ".json");
         PacketHandler.init();
     }
@@ -30,9 +30,9 @@ public class BaseClass{
             if(event.getWorld() instanceof ServerWorld){
                 ((ServerWorld)event.getWorld()).getGameRules().get(GameRules.DO_DAYLIGHT_CYCLE).set(false, ((ServerWorld)event.getWorld()).getServer());
                 if(Config.SidedConfig.isAlwaysNight()){
-                    ((ServerWorld)event.getWorld()).func_241114_a_(18000L);//setNightTime
+                    ((ServerWorld)event.getWorld()).setDayTime(18000L);//setNightTime
                 }else{
-                    ((ServerWorld)event.getWorld()).func_241114_a_(6000L);//setDayTime
+                    ((ServerWorld)event.getWorld()).setDayTime(6000L);//setDayTime
                 }
             }
         }
